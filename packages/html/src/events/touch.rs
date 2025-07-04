@@ -268,6 +268,7 @@ pub trait HasTouchPointData: InteractionLocation + std::any::Any {
 
 #[cfg(feature = "serialize")]
 /// A serialized version of TouchPoint
+#[serde(rename_all = "camelCase")]
 #[derive(serde::Serialize, serde::Deserialize, Debug, PartialEq, Clone)]
 struct SerializedTouchPoint {
     identifier: i32,
